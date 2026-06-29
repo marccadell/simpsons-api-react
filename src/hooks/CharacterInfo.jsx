@@ -1,6 +1,10 @@
 import '../styles/CharacterInfo.css'
 
 function CharacterInfo({ character }) {
+    if (!character) {
+        return null
+    }
+
     return (
         <div className="info">
             <p><strong>Edad:</strong> {character.age || "No disponible"}</p>

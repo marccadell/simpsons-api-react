@@ -1,0 +1,17 @@
+.profile {
+    text-align: center;
+}
+
+.back-button {
+    padding: 12px 18px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    background-color: #f1f1f1;
+}

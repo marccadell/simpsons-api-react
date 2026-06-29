@@ -8,4 +8,10 @@
 
 .card img {
     width: 180px;
+    max-width: 100%;
+}
+
+.episode img {
+    width: 200px;
+    max-width: 100%;
 }

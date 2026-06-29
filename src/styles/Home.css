@@ -3,17 +3,84 @@
     padding: 40px;
 }
 
-input {
-    padding: 10px;
-    width: 80px;
-    margin-right: 10px;
+.search-box {
+    position: relative;
+    width: 300px;
+    margin: 0 auto 30px;
 }
 
-button {
-    padding: 10px 16px;
+.search-box input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    margin: 0 auto 25px;
+}
+
+
+.results {
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #ddd;
+    z-index: 10;
+}
+
+.results button {
+    width: 100%;
+    padding: 10px;
     border: none;
-    background-color: #222;
-    color: white;
+    background-color: white;
+    text-align: left;
     cursor: pointer;
-    border-radius: 6px;
+}
+
+.results button:hover {
+    background-color: #f1f1f1;
+}
+
+.container-logo {
+    margin: 0 auto 25px;
+    width: 30%;
+    display: flex;
+}
+
+.characters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.character-item {
+    padding: 16px;
+    background-color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.character-item:hover {
+    transform: translateY(-4px);
+}
+
+.character-item img {
+    height: 150px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.character-item h2 {
+    font-size: 18px;
+    margin: 12px 0 0;
+}
+
+.message {
+    margin: 24px 0;
+    font-weight: bold;
+}
+
+.error-message {
+    color: #b00020;
 }
