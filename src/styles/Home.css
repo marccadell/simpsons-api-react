@@ -16,6 +16,7 @@
         }
 
         .search-box {
+            position: relative;
             width: auto;
             margin: 0 auto 30px;
             display: flex;
@@ -30,12 +31,26 @@
         }
 
         .results {
+            position: absolute;
+            width: 100%;
+            background-color: white;
+            border: 1px solid #ddd;
             margin: 55px auto 0;
+            z-index: 10;
         }
 
         .results button {
-            font-size: 19px;
+            width: 100%;
             padding: 16px;
+            border: none;
+            font-size: 19px;
+            background-color: white;
+            text-align: left;
+            cursor: pointer;
+        }
+
+        .results button:hover {
+            background-color: #f1f1f1;
         }
 
         .characters-grid {
@@ -46,6 +61,76 @@
             margin: 0 auto;
             align-self: center;
             justify-self: center;
+        }
+
+        .character-item {
+            padding: 16px;
+            background-color: white;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .character-item:hover {
+            transform: translateY(-4px);
+        }
+
+        .character-item img {
+            height: 150px;
+            max-width: 100%;
+            object-fit: contain;
+        }
+
+        .character-item h2 {
+            font-size: 18px;
+            margin: 12px 0 0;
+            text-align: center;
+        }
+
+        @media (min-width: 526px) and (max-width: 600px) {
+            .characters-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 400px) {
+            .search-box input {
+                padding: 8px;
+                font-size: 14px;
+                margin: 0 auto 15px;
+            }
+
+            .search-box input::placeholder {
+                font-size: 14px;
+            }
+
+            .results {
+                margin: 35px auto 0;
+            }
+
+            .results button {
+                padding: 12px;
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 315px) {
+            .characters-grid {
+                grid-template-columns: minmax(80px, 1fr) !important;
+                gap: 10px;
+                max-width: 300px !important;
+            }
+
+            .character-item h2 {
+                font-size: 14px;
+                margin: 14px 0 0;
+            }
+        }
+
+        .message {
+            margin: 24px 0;
+            font-weight: bold;
         }
     }
 
